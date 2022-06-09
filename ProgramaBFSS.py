@@ -60,6 +60,14 @@ class Grafo:
                 if registro not in visitado:
                     #agregara a la derecha de la cola
                     cola.append(registro)
+                            
+if __name__ == "__main__":
+    numeroNodos= input('Digite porfavor el numero de nodos: ')
+    posicionInicial= input('Digite la posicion inicial del grafo : ')
+    grafo= Grafo(int(numeroNodos),posicionInicial)
+    grafo.registrarZonas()
+    print('A continuación tiene que agregar las aristas al grafo')
+    while True:
                     
         
     
