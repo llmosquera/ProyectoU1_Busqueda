@@ -28,5 +28,20 @@ class Grafo:
         self.dict_list[nodo1].add((nodo2))
         self.dict_list[nodo2].add((nodo1))
         
+    #Establece un dicccionario que usa los nombres establecidos
+    def estructurarNodos(self):
+        self.dict_list = {nodo: set() for nodo in self.nombreNodos}
+    
+    #Logica del algoritmo bfs
+    def bfs(self,objetivo):
+        #establece en una variable el diccionario
+        g=self.dict_list
+        #agregar en forma de estructura de datos
+        cola= collections.deque([self.raiz])
+        #Establecer una lista de areas visitadas
+        visitado=[]
+        #mientras haya elementos en la cola
+        while cola:
+        
     
    
