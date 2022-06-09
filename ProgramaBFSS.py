@@ -42,6 +42,25 @@ class Grafo:
         visitado=[]
         #mientras haya elementos en la cola
         while cola:
+            
+            #saca el elemento de la izquierda
+            nodo = cola.popleft()
+            #si el nodo no ha sido visitado
+            if nodo not in visitado:
+                #agregara el nodo a visitados
+                visitado.append(nodo)
+                #si llegamos a la respuesta nos devolverá la posicion actual
+                if nodo == objetivo:
+                    self.raiz=nodo
+                    print(f' {visitado} ')
+                    return
+            #Si ha sido visitado recorrerá los elementos que se encuentran asociados al nodo
+            for registro in g[nodo]:
+                #si encuentra alguno que no es visitado
+                if registro not in visitado:
+                    #agregara a la derecha de la cola
+                    cola.append(registro)
+                    
         
     
    
