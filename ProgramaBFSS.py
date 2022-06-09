@@ -20,5 +20,13 @@ class Grafo:
         
     #Muestra el grafo completo            
     def mostrarZonas(self):
+        
+        print(self.dict_list)
+    #Agrega aristas para unir dos nodos
+    def agregarAristas(self, nodo1, nodo2):
+        '''accede al diccionario de lista para agregar nodos 1 y 2'''
+        self.dict_list[nodo1].add((nodo2))
+        self.dict_list[nodo2].add((nodo1))
+        
     
    
