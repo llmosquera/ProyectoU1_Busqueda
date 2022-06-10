@@ -68,6 +68,25 @@ if __name__ == "__main__":
     grafo.registrarZonas()
     print('A continuación tiene que agregar las aristas al grafo')
     while True:
+        
+        nodo1=input('Digite el nodo 1 : ')
+        nodo2=input('Digite el nodo 2 : ')
+        grafo.agregarAristas(nodo1,nodo2)
+        print('Conectando nodo '+nodo1+' con nodo '+nodo2)
+        opcion= input('Digite s para ya no ingresar mas aristas: ')
+        if(opcion.strip().lower()=='s'):
+            break
+    print('A continuacion se muestra el grafo: ')
+    grafo.mostrarZonas()
+    
+    while True:
+        print('El nodo inicial del grafo es: '+grafo.raiz)
+        objetivo= input('Digite el nombre del grafo objetivo: ')
+        print('El camino es : ')
+        grafo.bfs(objetivo)
+        opcion= input('Si desea ir a otro lado del grafo, digite s: ')
+        if opcion!='s':
+            break
                     
         
     
