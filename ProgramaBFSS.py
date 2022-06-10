@@ -182,6 +182,7 @@ if __name__ == "__main__":
         objetivo= input('Digite el nombre del grafo objetivo: ')
         print('El camino es : ')
         grafo.bfs(objetivo)
+        '''Imprime el mensaje'''
         opcion= input('Si desea ir a otro lado del grafo, digite s: ')
         if opcion!='s':
             break
